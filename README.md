@@ -1,21 +1,49 @@
-# mpvue-blank
+# 描述
 
-> A Vue.js project
+> 利用 vue mpvue 同时生成小程序和SPA单页应用
 
-## Build Setup
+
+## 主要功能
+
+- vue开发体验
+- 一份代码生成小程序+SPA两个版本
+- 兼容vue路由写法
+- 动态添加路由页面
+- flyio统一请求库（TODO）
+
+## 感谢
+
+只是一些功能组合，方便快速搭建环境
+感谢[vuejs](https://vuejs.org/)
+感谢[mpvue](http://mpvue.com/)
+感谢[F-loat](https://github.com/F-loat)
+
+## 使用
+
+
+- 利用 vue-cli 生成初始工程，按步骤选择安装mpvue vue-router，根据需求选择其他组件
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+$ npm install -g vue-cli
+$ vue init newbeea/vue-mp-web my-project
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- 进入工程目录安装依赖，开始开发
+
+``` bash
+# 安装依赖
+npm install
+
+# 编译 web 版本，启动服务器，具体端口见终端输出（默认8080），热更新
+npm run dev
+
+# 构建 web 版本
+npm run build
+
+# 编译小程序版本，实时更新，支持动态添加路由无需重启，打开微信开发者工具，选择 dist 目录，查看效果
+npm run dev-mp
+
+# 构建小程序版本
+npm run build-mp
+
+```
